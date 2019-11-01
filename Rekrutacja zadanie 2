@@ -1,0 +1,23 @@
+import random
+wylosowana_liczba = random.randint(1,10)
+twoja_liczba = 1
+podejscie = 0
+print('Odgadnij liczbę od 1 do 10:')
+while wylosowana_liczba != twoja_liczba:   
+    twoja_liczba = input()
+    podejscie += 1
+    if twoja_liczba == "exit":
+       print("Poddałeś się")
+       break 
+    else:
+      twoja_liczba = int(twoja_liczba)
+    if twoja_liczba >=1 and twoja_liczba <=10:
+        if twoja_liczba < wylosowana_liczba:  
+            print('Ta liczba jest za niska')
+            print('To Twoja' , podejscie ,'próba.')
+        elif twoja_liczba > wylosowana_liczba:
+            print ('Ta liczba jest za duża')
+            print('To Twoja' ,podejscie ,'próba.')
+        elif twoja_liczba==wylosowana_liczba:
+            print('Brawo odgadłeś liczbę!')
+            print('Odgadłeś za',podejscie,'razem.')
